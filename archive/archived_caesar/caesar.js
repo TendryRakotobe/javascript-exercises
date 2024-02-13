@@ -31,11 +31,8 @@ const caesar = function(msg, key) {
             if(min.indexOf(car) !== -1){
                 let index = ((min.indexOf(car) + key) + min.length) % 26;
                 if(min.indexOf(car) + key >= 0){
-                    console.log("if");
                     return min[ min.indexOf(car) + key];
-                    
                 } else {
-                    console.log("else");
                     return min[index];
                 }  
             } else if(maj.indexOf(car) !== -1){
@@ -52,5 +49,10 @@ const caesar = function(msg, key) {
     }).join("");
     return msg;
 };
+cryptage = caesar("Hello", 5);
+console.log(cryptage);
+decryptage = caesar(cryptage, -5);
+console.log(decryptage); 
+
 // Do not edit below this line
 module.exports = caesar;
