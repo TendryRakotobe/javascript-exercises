@@ -1,7 +1,7 @@
 
 const findTheOldest = function(arr) {
     arr = arr.sort((a, b) => {
-        const currentYear = 2024;
+        const currentYear =  new Date().getFullYear();
         if(a.yearOfDeath === undefined){
             a.yearOfDeath = currentYear;
         }
